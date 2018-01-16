@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  font-family: 'Roboto', sans-serif;
+}
+html, body {
+  height: 100%;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+}
+.login {
+  background: #ecf0f1;
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.login h3 {
+  margin: 0 auto 10px;
+  color: #34495e;
+}
+.login input {
+height: 40px;
+display: block;
+width: 100%;
+padding: 0 10px;
+margin: 10px auto 0;
+border: 1px solid #bdc3c7;
+border-radius: 4px;
+}
+.login input[type=submit] {
+  background: #3498db;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+    transition: background .25s ease;
+}
+.welcome {
+  color: #ecf0f1;
+}
+.login input[type=submit]:hover {
+  background: #2980b9;
+}
