@@ -9,6 +9,8 @@
        $username = mysqli_real_escape_string($connection, $username);
        $password = mysqli_real_escape_string($connection, $password);
 
+
+
        $query = "SELECT * FROM users WHERE username = '{$username}' ";
        $select_user_query = mysqli_query($connection, $query);
 
@@ -21,6 +23,8 @@
           $db_username = $row['username'];
           $db_password = $row['password'];
        }
+
+       $password = crypt($password, $db_password);
 
        if ($username === $db_username && $password === $db_password) {
           $_SESSION['username'] = $db_username;
@@ -40,6 +44,7 @@
     <input type="text" name="username" placeholder="Användarnamn" required autofocus>
     <input type="password" name="password" placeholder="Lösenord" required>
     <input class="button" type="submit" name="login" value="Logga in">
+    <a class="button" href="register.php">Ny användare? Registrera dig här</a>
   </form>
 
 </body>

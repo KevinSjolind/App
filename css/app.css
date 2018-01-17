@@ -56,3 +56,9 @@ border-radius: 4px;
 .login input[type=submit]:hover {
   background: #2980b9;
 }
+.login a {
+  color: #34495e;
+  display: block;
+  font-size: 14px;
+  margin: 15px auto 0;
+}
