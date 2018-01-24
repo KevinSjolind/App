@@ -12,12 +12,14 @@ html {
 }
 html, body {
   height: 100%;
+  margin: 0;
 }
-body {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0;
+
+#login, #register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .login {
   background: #ecf0f1;
@@ -61,4 +63,37 @@ border-radius: 4px;
   display: block;
   font-size: 14px;
   margin: 15px auto 0;
+}
+#alert {
+  background: red;
+  color: white;
+  margin-top: 10px;
+}
+nav {
+  background: #242424;
+  line-height: 80px;
+  color: #fff;
+  padding: 0 20px;
+  text-align: center;
+}
+nav a {
+  color: #ddd;
+  float: right;
+  text-decoration: none;
+}
+nav a:hover {
+  color: black;
+}
+nav h1 {
+  margin: 0 auto;
+}
+section {
+  background: #fff;
+  padding: 20px;
+  margin: 100px auto 0;
+  width: 320px;
+}
+section h2 {
+  margin: 0 auto;
+  text-align: center;
 }

@@ -1,6 +1,11 @@
 <?php
-  include 'includes/db.php';
-  session_start();
+        $title = 'Logga in!';
+        $bodyID = "login";
+        include "includes/head.php";
+        session_start();
+
+        $db_username = '';
+        $db_password = '';
 
   if (isset($_POST['login'])) {
        $username = $_POST['username'];
@@ -8,8 +13,6 @@
 
        $username = mysqli_real_escape_string($connection, $username);
        $password = mysqli_real_escape_string($connection, $password);
-
-
 
        $query = "SELECT * FROM users WHERE username = '{$username}' ";
        $select_user_query = mysqli_query($connection, $query);
@@ -27,15 +30,15 @@
        $password = crypt($password, $db_password);
 
        if ($username === $db_username && $password === $db_password) {
+         $_SESSION['id'] = $db_id;
           $_SESSION['username'] = $db_username;
           header("Location: index.php");
        }
        else {
-          header("Location: login.php");
+
+          $errorMessage = "Fel användarnamn eller lösenord!";
        }
   }
-  $title = 'Logga in!';
-  include "includes/head.php";
  ?>
 
 
@@ -45,7 +48,11 @@
     <input type="password" name="password" placeholder="Lösenord" required>
     <input class="button" type="submit" name="login" value="Logga in">
     <a class="button" href="register.php">Ny användare? Registrera dig här</a>
+    <?php if ($errorMessage) : ?>
+    <div id="alert"><?php echo $errorMessage; ?></div>
+    <?php endif; ?>
   </form>
+
 
 </body>
 </html>
