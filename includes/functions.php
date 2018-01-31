@@ -1,4 +1,7 @@
 <?php
+
+  $appName = "ToDo";
+
   function usernameExists($username) {
     global $connection;
 

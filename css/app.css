@@ -1,99 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-* {
-  box-sizing: border-box;
-}
-html {
-  background: #16222A;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-  font-family: 'Roboto', sans-serif;
-}
 html, body {
   height: 100%;
-  margin: 0;
 }
-
-#login, #register {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/*Landing page*/
+video {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left:  0;
+  right: 0;
 }
-.login {
-  background: #ecf0f1;
-  width: 320px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 4px;
-}
-.login h3 {
-  margin: 0 auto 10px;
-  color: #34495e;
-}
-.login input {
-height: 40px;
-display: block;
-width: 100%;
-padding: 0 10px;
-margin: 10px auto 0;
-border: 1px solid #bdc3c7;
-border-radius: 4px;
-}
-.login input[type=submit] {
-  background: #3498db;
-  cursor: pointer;
-  letter-spacing: 1px;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: bold;
-  color: #fff;
-    transition: background .25s ease;
-}
-.welcome {
-  color: #ecf0f1;
-}
-.login input[type=submit]:hover {
-  background: #2980b9;
-}
-.login a {
-  color: #34495e;
-  display: block;
-  font-size: 14px;
-  margin: 15px auto 0;
-}
-#alert {
-  background: red;
-  color: white;
-  margin-top: 10px;
-}
-nav {
-  background: #242424;
-  line-height: 80px;
-  color: #fff;
-  padding: 0 20px;
-  text-align: center;
-}
-nav a {
-  color: #ddd;
-  float: right;
-  text-decoration: none;
-}
-nav a:hover {
-  color: black;
-}
-nav h1 {
-  margin: 0 auto;
-}
-section {
+main {
   background: #fff;
-  padding: 20px;
-  margin: 100px auto 0;
-  width: 320px;
+  height: 520px;
+  width: 520px;
 }
-section h2 {
-  margin: 0 auto;
-  text-align: center;
-}
+/*END Landing page*/
