@@ -2,7 +2,6 @@
   include "db.php";
   include "functions.php";
 
-  $title = "Välkommen";
  ?>
  <!doctype html>
  <html lang=sv>
