@@ -9,6 +9,7 @@
 html, body {
   height: 100%;
 }
+
 /*Layout END*/
 
 /*Splash Screen*/
@@ -71,6 +72,13 @@ html, body {
 }
 /*Splash Screen END*/
 
+/* FIX THIS LATER */
+.uglySolutionFixLater {
+  margin: 200px auto 0;
+}
+
+/* FIX THIS LATER end */
+
 /*Landing page*/
 video {
   object-fit: cover;
@@ -86,16 +94,109 @@ video {
 main p {
   color: #fff;
   font-size: 24px;
+  font-weight: 400;
+  text-shadow: rgba(0, 0, 0, .25) 2px 2px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  margin: 20px auto;
 }
-main img {
-  margin: 0 auto 40px;
-}
+
 main p span {
-  font-weight: bold;
+  font-weight: 700;
   color: #FF9420;
 }
+main a:first-of-type {
+  margin: 0 10px 0 0;
+}
+.btn-outline-light {
+  color: black;
+  border-color: #FF9420;
+  background: #FF9420;
+}
+.btn-outline-light:hover {
+  color: black;
+  border-color: black;
+  background: #FF9420;
+}
+form h3 {
+  color: #FF9420;
+}
+
+/* Landing page end */
+
+/* profile header */
+#profileHeader {
+  background: #74ebd5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 250px;
+  text-align: center;
+}
+#profileHeader figure img,
+#profileHeader figure svg {
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  border: 8px solid #FF9420;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+#profileHeader figure h1 {
+  color: #FF9420;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    margin: 0;
+    font-weight: 700;
+}
+#profileHeader figure {
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+#profileHeader figure:before {
+  position: absolute;
+  border-radius: 50%;
+  background: #2ecc71;
+  content: '';
+  display: block;
+  height: 25px;
+  width: 25px;
+  left: 10px;
+  top: 10px;
+
+}
+#profileHeader figure.away:before {
+  background: #3498db;
+}
+#profileHeader figure.offline:before {
+  background: #e74c3c;
+}
+/* profile header end */
+.userforms {
+  margin: 0 auto 40px;
+}
+.userforms a {
+  margin: 10px auto 0;
+}
+
+/* Login page */
+#login {
+  background: #bdc3c7;
+  text-align: center;
+  margin: 40px auto 0;
+  padding: 20px;
+  border-radius: 6px;
+}
+#login h3 {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto 20px;
+  padding: 0 20px 5px;
+}
+/* Login page end */
+
 /* NAVIGATION */
 .navbar-brand img {
   height: auto;
@@ -105,7 +206,7 @@ main p span {
 
 /* tasks */
 #tasks {
-  background: #000;
+  background: #bdc3c7;
   text-align: center;
   margin: 40px auto 0;
   padding: 20px;
@@ -116,11 +217,9 @@ main p span {
   font-family: 'Roboto', sans-serif;
   margin: 0 auto 20px;
   padding: 0 20px 5px;
-  border-bottom: 1px solid #000;
 }
 /* tasks end */
 
-/*Landing page END*/
 
 /*Animations*/
 @keyframes splashScreenAnimation {

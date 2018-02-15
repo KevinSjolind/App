@@ -5,16 +5,16 @@ if (sessionStorage.getItem('splashScreen') !== 'true') {
 
   var quotes = [
     {
-      quote: "citat2",
-      author: "Author2"
+      quote: "Yesterday you said tomorrow. Just do it.",
+      author: "Nike"
     },
     {
-      quote: "citat1",
-      author: "Author1"
+      quote: "I could agree with you but then we’d both be wrong",
+      author: "Harvey Specter"
     },
     {
-      quote: "citat3",
-      author: "Author3"
+      quote: "Reality is wrong, dreams are for real.",
+      author: "Tupac"
     },
   ];
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];

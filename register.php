@@ -1,49 +1,29 @@
 <?php
+  $bodyClass = "d-flex justify-content-center align-items-center";
         $title = 'Registrera';
         $bodyID = "register";
         include "includes/head.php";
         session_start();
 
   if (isset($_POST['register'])) {
-       $username = $_POST['username'];
-       $password = $_POST['password'];
-
-
-       if (usernameExists($username)) {
-         echo "Användarnamnet finns redan";
-       }
-       else {
-
-         $username = mysqli_real_escape_string($connection, $username);
-         $password = mysqli_real_escape_string($connection, $password);
-         // Password encryption
-         $hashFormat = "$2y$10$";
-         $salt = "a9UK8VBd3R8dW78AjKUWjc";
-         $hashAndSalt = $hashFormat . $salt;
-         $password = crypt($password, $hashAndSalt);
-
-         // SQL QUERY
-         $query = "INSERT INTO users(username, password) ";
-         $query .= "VALUES ('$username', '$password')";
-
-         // Confirmation
-         $result = mysqli_query($connection, $query);
-         if (!$result) {
-           die("Query failed") . mysqli_error($connection);
-         }
-
-         header("Location: login.php");
-       }
+    registerUser();
+    $errorMessage = registerUser();
   }
  ?>
 
-
-  <form class="animated fadeInDownBig login " action="register.php" method="post">
+  <form class="col-12 col-sm-8 col-lg-3 userforms animated fadeInDownBig" action="register.php" method="post">
     <h3>Registrera</h3>
-    <input type="text" name="username" placeholder="Användarnamn" required autofocus>
-    <input type="password" name="password" placeholder="Lösenord" required>
-    <input class="button" type="submit" name="register" value="Registrera">
+    <div class="form-group">
+      <input type="text" name="username" class="form-control" placeholder="Användarnamn" required autofocus>
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" class="form-control" placeholder="Lösenord" required>
+    </div>
+    <button type="submit" name="register" class="btn btn-block btn btn-outline-light">Registrera</button>
+    <a class="button" href="login.php">Har du redan ett konto? LOGGA IN!!</a>
+    <?php if ($errorMessage) : ?>
+    <div id="alert"><?php echo $errorMessage; ?></div>
+    <?php endif; ?>
   </form>
 
-</body>
-</html>
+<?php include "includes/footer.php"; ?>

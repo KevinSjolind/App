@@ -15,8 +15,8 @@
           Konto
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="settings.php">Inställningar</a>
             <a class="dropdown-item" href="logout.php">Logga ut <?php echo $_SESSION['username']; ?></a>
-
         </div>
       </li>
 

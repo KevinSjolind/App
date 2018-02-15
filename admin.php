@@ -1,7 +1,6 @@
 <?php
   session_start();
   include "includes/head.php";
-  checkIfUsernameEndsWithS();
 
   if (isset($_POST['addTask'])) {
     addTask();
@@ -14,13 +13,13 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <?php include "includes/tasks.php"; ?>
+    <?php include "includes/profile.php"; ?>
+    <?php //include "includes/tasks.php"; ?>
   </div>
 </div>
 
   <?php else : ?>
     <h1>FA BORT!</h1>
 <?php endif; ?>
-
 
 <?php include "includes/footer.php"; ?>
